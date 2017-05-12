@@ -1,0 +1,5 @@
+{% if is_granted('ROLE_SUPER_ADMIN') %}
+    {% include 'HologramBundle::layout.html.twig' %}
+{% else %}
+    {% include 'HologramBundle::layouts.html.twig' %}
+{% endif %}

@@ -1,0 +1,53 @@
+{% if is_granted('ROLE_SUPER_ADMIN') %}
+    {% extends "HologramBundle::layout.html.twig" %}
+{% else %}
+    {% extends "HologramBundle::layouts.html.twig" %}
+{% endif %}
+
+{% block mainContent %}  
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-md-12">
+                    <div class="card card-plain">
+                        <div class="card-header" data-background-color="purple">
+                            <h4 class="title">Product</h4>
+                            <p class="category">List of all products</p>
+                        </div>
+                        <div class="card-content table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                <th>Image</th>
+                                <th>Nom</th>
+                                <th>Date</th>
+                                <th>Etat</th>
+                                <th>Descrition</th>
+                                </thead>
+                                {% for p in prod  %}
+                                    <tbody>
+                                        <tr>
+                                            <td><img width="50" height="50" src="{{asset('../web/Uploads/'~ p.productPhoto)}}"></td>
+                                            <td><a> <span>{{ p.productName }}</span></a></td>
+                                            <td>{{ p.productDate|date('d/m/Y')}} </td>
+                                             <td>{% if p.etat == 'waiting' %}
+                                                <div class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Waiting</div>
+                                                {% elseif p.etat == 'valider' %}
+                                                    <div class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Validate </div>
+                                                    {% endif %}</td>
+                                                    <td><a>{{ p.productContent }}</a></td>
+                                                   
+                                                </tr>	                       	                                       
+                                                {% endfor %}
+ 
+                                                </tbody>
+
+
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock %}

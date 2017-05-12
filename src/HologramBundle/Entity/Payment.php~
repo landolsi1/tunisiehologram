@@ -1,0 +1,61 @@
+<?php
+
+namespace HologramBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Payment
+ *
+ * @ORM\Table(name="payment", indexes={@ORM\Index(name="idproduct", columns={"idproduct", "iduser"})})
+ * @ORM\Entity
+ */
+class Payment
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="idproduct", type="integer", nullable=false)
+     */
+    private $idproduct;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="iduser", type="integer", nullable=false)
+     */
+    private $iduser;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="prix", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $prix;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="total", type="float", precision=10, scale=0, nullable=false)
+     */
+    private $total;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="verification", type="text", length=65535, nullable=false)
+     */
+    private $verification;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+

@@ -1,0 +1,32 @@
+hologram_homepage:
+    path:     /
+    defaults: { _controller: HologramBundle:Default:indexx }
+esprit_hologram_front_products:
+     path:     /allproducts
+     defaults: { _controller: HologramBundle:Default:viewProducts }
+
+esprit_hologram_add_product:
+     path:     /addProduct
+     defaults: { _controller: HologramBundle:Default:addProduct }
+hologram_signUp:
+    path:     /register
+    defaults: { _controller: HologramBundle:Default:registerRedirect }
+hologram_profile:
+    path:     /profile
+    defaults: { _controller: HologramBundle:Default:profileRedirect }
+hologram_homepagee:
+    path:     /index
+    defaults: { _controller: HologramBundle:Default:indexx }
+esprit_hologram_front_products_waiting:
+    path:     /productswaiting
+    defaults: { _controller: HologramBundle:Default:productswaiting }    
+esprit_hologram_refuse_product :
+     path:     /refuseprod/{id}
+     defaults: { _controller: HologramBundle:Default:refuseProduct }
+     
+esprit_hologram_validatate_product :
+     path:     /valiaterprod/{id}
+     defaults: { _controller: HologramBundle:Default:validateProduct }
+user_my_products:
+     path:     /myProducts
+     defaults: { _controller: HologramBundle:Default:myProducts }
