@@ -10,7 +10,7 @@ use HologramBundle\Form\PaymentForm;
 use HologramBundle\Form\ProductForm;
 use HologramBundle\Form\ValidateProductForm;
 use HologramBundle\Form\EditProductForm;
-//rami
+
 class DefaultController extends Controller
 {
     public function indexAction()
