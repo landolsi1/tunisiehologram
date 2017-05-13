@@ -32,12 +32,32 @@ class DefaultController extends Controller
         return $this->render('FOSUserBundle::edit.html.twig');
     }
     
+    public function  paiementAction(){
+        
+        
+       $em = $this->getDoctrine()->getManager();
+       $paiement=new Payment();
+       $form=$this->createForm(new PaymentForm(),$paiement);
+        $request=$this->get('request');
+        $form->handleRequest($request);
+         if($form->isValid())
+        {
+             
+            $em->persist($paiement);
+            $em->flush();
+      
+            return $this->redirectToRoute('esprit_hologram_front_products');
+        }
+      
+ 
+        return $this->render('HologramBundle:Front:Payement.html.twig',array('f'=>$form->createView()));
+    }
+
     
     
-    
-    
-    
-     public function viewProductsAction() {
+
+
+    /*public function viewProductsAction() {
          
         $em=$this->getDoctrine()->getManager();
         $products=$em->getRepository('HologramBundle:Product')->findAll(); 
@@ -136,6 +156,6 @@ class DefaultController extends Controller
                 array('prod'=>$products));  
           
       }
-    
+    */
     
 }

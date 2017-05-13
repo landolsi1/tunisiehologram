@@ -463,7 +463,7 @@
     <parameter key="assetic.read_from">C:\wamp\www\tunisiehologram\app/../web</parameter>
     <parameter key="assetic.write_to">C:\wamp\www\tunisiehologram\app/../web</parameter>
     <parameter key="assetic.variables" type="collection"/>
-    <parameter key="assetic.java.bin">C:\Program Files\Java\jdk1.8.0_25\bin\java.EXE</parameter>
+    <parameter key="assetic.java.bin">\ProgramData\Oracle\Java\javapath\java.EXE</parameter>
     <parameter key="assetic.node.bin">C:\Program Files\nodejs\\node.EXE</parameter>
     <parameter key="assetic.ruby.bin">/usr/bin/ruby</parameter>
     <parameter key="assetic.sass.bin">/usr/bin/sass</parameter>
@@ -3111,7 +3111,7 @@
         </argument>
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>5916fb980abfc2.06886011</argument>
+            <argument>591756713d3a30.65923201</argument>
           </service>
         </argument>
       </argument>
@@ -3553,7 +3553,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.context"/>
-            <argument>5916fb980abfc2.06886011</argument>
+            <argument>591756713d3a30.65923201</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>

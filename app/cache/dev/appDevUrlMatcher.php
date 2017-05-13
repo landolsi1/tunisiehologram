@@ -139,12 +139,12 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         if (0 === strpos($pathinfo, '/a')) {
             // esprit_hologram_front_products
             if ($pathinfo === '/allproducts') {
-                return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::viewProductsAction',  '_route' => 'esprit_hologram_front_products',);
+                return array (  '_controller' => 'HologramBundle\\Controller\\ProductController::viewProductsAction',  '_route' => 'esprit_hologram_front_products',);
             }
 
             // esprit_hologram_add_product
             if ($pathinfo === '/addProduct') {
-                return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::addProductAction',  '_route' => 'esprit_hologram_add_product',);
+                return array (  '_controller' => 'HologramBundle\\Controller\\ProductController::addProductAction',  '_route' => 'esprit_hologram_add_product',);
             }
 
         }
@@ -166,22 +166,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         // esprit_hologram_front_products_waiting
         if ($pathinfo === '/productswaiting') {
-            return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::productswaitingAction',  '_route' => 'esprit_hologram_front_products_waiting',);
+            return array (  '_controller' => 'HologramBundle\\Controller\\ProductController::productswaitingAction',  '_route' => 'esprit_hologram_front_products_waiting',);
         }
 
         // esprit_hologram_refuse_product
         if (0 === strpos($pathinfo, '/refuseprod') && preg_match('#^/refuseprod/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'esprit_hologram_refuse_product')), array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::refuseProductAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'esprit_hologram_refuse_product')), array (  '_controller' => 'HologramBundle\\Controller\\ProductController::refuseProductAction',));
         }
 
         // esprit_hologram_validatate_product
         if (0 === strpos($pathinfo, '/valiaterprod') && preg_match('#^/valiaterprod/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'esprit_hologram_validatate_product')), array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::validateProductAction',));
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'esprit_hologram_validatate_product')), array (  '_controller' => 'HologramBundle\\Controller\\ProductController::validateProductAction',));
         }
 
         // user_my_products
         if ($pathinfo === '/myProducts') {
-            return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::myProductsAction',  '_route' => 'user_my_products',);
+            return array (  '_controller' => 'HologramBundle\\Controller\\ProductController::myProductsAction',  '_route' => 'user_my_products',);
+        }
+
+        // user_payement
+        if ($pathinfo === '/payer') {
+            return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::paiementAction',  '_route' => 'user_payement',);
         }
 
         // homepage

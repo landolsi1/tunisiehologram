@@ -30,12 +30,6 @@ class Product {
      * @ORM\Column(type="integer")
      */
     private $idProduit;
-      /**
-       *@ORM\ManyToOne(targetEntity="User", inversedBy="products")
-     * @ORM\JoinColumn(name="iduser", referencedColumnName="id")
-       * * @ORM\Column(type="integer")
-     */
-    private $iduser;
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -51,22 +45,32 @@ class Product {
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $etat = 'waiting';
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $classeProduct;
+    private $etat = 'en attente';
     /**
      * @ORM\Column(type="string", length=255)
      * @@Assert\File(maxSize="2147483648")
+     * mimeTypesMessage = "Please upload a valid Video"
      */
     private $video;
    
     /**
      * @ORM\Column(type="string", length=255)
      * @@Assert\File(maxSize="2147483648")
+     * mimeTypesMessage = "Please upload a valid Photo"
      */
     private $productPhoto;
+    
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="HologramBundle\Entity\User")
+     */
+    private $idUser;
+    
+    /**
+     * @ORM\Column(type="string", length=255,  nullable=true))
+     * @@Assert\File(maxSize="2147483648")
+     */
+    private $finalVideo = null;
     
     function getIdProduit() {
         return $this->idProduit;
@@ -123,20 +127,23 @@ class Product {
     function setProductPhoto($productPhoto) {
         $this->productPhoto = $productPhoto;
     }
-    function getIduser() {
-        return $this->iduser;
+
+    function getIdUser() {
+        return $this->idUser;
     }
 
-    function setIduser($iduser) {
-        $this->iduser = $iduser;
-    }
-    function getClasseProduct() {
-        return $this->classeProduct;
+    function setIdUser($idUser) {
+        $this->idUser = $idUser;
     }
 
-    function setClasseProduct($classeProduct) {
-        $this->classeProduct = $classeProduct;
+    function getFinalVideo() {
+        return $this->finalVideo;
     }
+
+    function setFinalVideo($finalVideo) {
+        $this->finalVideo = $finalVideo;
+    }
+
 
 
 }
