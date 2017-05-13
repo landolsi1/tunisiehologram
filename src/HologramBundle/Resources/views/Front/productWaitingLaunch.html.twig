@@ -1,8 +1,6 @@
-{% if is_granted('ROLE_SUPER_ADMIN') %}
-    {% extends "HologramBundle::layout.html.twig" %}
-{% else %}
-    {% extends "HologramBundle::layouts.html.twig" %}
-{% endif %}
+{% extends is_granted('ROLE_SUPER_ADMIN')
+    ? 'HologramBundle::layout.html.twig'
+    : 'HologramBundle::layouts.html.twig' %}
 {% block mainContent %}  
 
     <div class="content">

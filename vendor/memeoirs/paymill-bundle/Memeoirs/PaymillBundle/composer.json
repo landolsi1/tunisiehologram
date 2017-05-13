@@ -1,0 +1,31 @@
+{
+    "name": "memeoirs/paymill-bundle",
+    "type": "symfony-bundle",
+    "description": "Paymill payments for Symfony apps",
+    "keywords": ["payment", "paymill"],
+    "homepage": "https://github.com/memeoirs/paymill-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paulo Rodrigues Pinto",
+            "email": "regularjack@gmail.com"
+        },
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/memeoirs/paymill-bundle/contributors"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "~2.0",
+        "jms/payment-core-bundle": "~1.0",
+        "paymill/paymill": "3.0.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.*"
+    },
+    "autoload": {
+        "psr-0": { "Memeoirs\\PaymillBundle": "" }
+    },
+    "target-dir": "Memeoirs/PaymillBundle"
+}

@@ -1,0 +1,54 @@
+{% block _jms_choose_payment_method_data_paymill_row %}
+  {# do not render the label "Paymill" #}
+  {{ form_widget(form) }}
+{% endblock %}
+
+{% block _jms_choose_payment_method_data_paymill_number_row %}
+  <div class="paymill-number">
+    {{ form_label(form) }}
+    <input type="text" id="jms_choose_payment_method_data_paymill_number"
+      placeholder="•••• •••• •••• ••••" autocompletetype="cc-number"
+      pattern="\d*" data-numeric=""/>
+    <div class="card-icon-placeholder"></div>
+    <div class="card-icon"></div>
+  </div>
+{% endblock %}
+
+{% block _jms_choose_payment_method_data_paymill_expiry_row %}
+  <div class="paymill-expiry">
+    {{ form_label(form) }}
+    <input type="text" id="jms_choose_payment_method_data_paymill_expires"
+      placeholder="MM / YY" autocompletetype="cc-exp" maxlength="9"
+      pattern="\d*" data-numeric=""/>
+  </div>
+{% endblock %}
+
+{% block _jms_choose_payment_method_data_paymill_holder_row %}
+  <div class="paymill-holder">
+    {{ form_label(form) }}
+    <input type="text" id="jms_choose_payment_method_data_paymill_holder"
+      autocompletetype="name" autocapitalize="words" autocorrect="off"
+      spellcheck="off"/>
+  </div>
+{% endblock %}
+
+{% block _jms_choose_payment_method_data_paymill_cvc_row %}
+  <div class="paymill-cvc">
+    {{ form_label(form) }}
+    <input type="text" id="jms_choose_payment_method_data_paymill_code"
+      placeholder="CVC" autocompletetype="cc-csc" maxlength="4" pattern="\d*"
+      autocomplete="off" data-numeric=""/>
+  </div>
+{% endblock %}
+
+{% block form_errors %}
+{% spaceless %}
+  <div class="paymill-errors"{% if errors|length == 0 %} style="display:none;"{% endif %}>
+    <ul>
+      {% for error in errors %}
+        <li class="alert alert-error">{{ error.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endspaceless %}
+{% endblock form_errors %}

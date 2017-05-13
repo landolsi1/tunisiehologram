@@ -137,6 +137,27 @@ class ComposerStaticInit11ec8737d802fa7d48e506d9ede21a56
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
             ),
         ),
+        'P' => 
+        array (
+            'Paymill' => 
+            array (
+                0 => __DIR__ . '/..' . '/paymill/paymill/lib',
+            ),
+        ),
+        'M' => 
+        array (
+            'Memeoirs\\PaymillBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/memeoirs/paymill-bundle',
+            ),
+        ),
+        'J' => 
+        array (
+            'JMS\\Payment\\CoreBundle' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/payment-core-bundle',
+            ),
+        ),
         'D' => 
         array (
             'Doctrine\\ORM\\' => 

@@ -1,0 +1,16 @@
+{{ paymill_initialize(order.amount, order.currency) }}
+
+{# looks better with bootstrap #}
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css">
+<link rel="stylesheet" type="text/css" href="{{ asset('bundles/memeoirspaymill/css/paymill.css') }}">
+
+{% form_theme form 'MemeoirsPaymillBundle::form.html.twig' %}
+<form action="{{ path('checkout', {'id': order.id}) }}"
+    method="post" autocomplete="on" novalidate class="paymill well">
+  {{ form_widget(form) }}
+
+  <input type="submit" class="btn btn-success"
+    value="Pay {{ order.amount }} {{ order.currency }}" />
+
+  {{ form_errors(form) }}
+</form>

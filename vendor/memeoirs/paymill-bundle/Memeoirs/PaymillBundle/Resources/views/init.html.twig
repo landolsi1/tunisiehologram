@@ -1,0 +1,22 @@
+{% spaceless %}
+
+<script>
+  var PAYMILL_PUBLIC_KEY = '{{ paymill.public_key }}';
+</script>
+
+<script src="//bridge.paymill.com/"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="{{ asset('bundles/memeoirspaymill/js/jquery.payment.js') }}"></script>
+<script src="{{ asset('bundles/memeoirspaymill/js/CreditCardForm.js') }}"></script>
+
+<script>
+  $(document).ready(function () {
+    Paymill.init({
+      amount: '{{ amount * 100 }}',
+      currency: '{{ currency }}'
+    });
+  });
+</script>
+
+{% endspaceless %}
