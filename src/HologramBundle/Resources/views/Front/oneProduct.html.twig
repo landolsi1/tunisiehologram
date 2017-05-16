@@ -1,0 +1,82 @@
+{% extends "HologramBundle::layouts.html.twig" %}
+{% block mainContent %}
+      <link href="{{asset('Front/css/FileCSS.css')}}" rel="stylesheet" type="text/css" />
+    <div class="container">
+    <div style="padding-left: 200px; width: 900px; color: #73879C;">
+   
+      </br>
+        
+          </br>
+     </br>
+     <span> <h3 style="padding-left: 300px; color: #73879C;"> Edit Product </h3> </span>
+     <br>
+     <br>
+      <form class="form-horizontal form-label-left" novalidate method="POST" action="" {{ form_enctype(f) }}>
+      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product name :<span class="required"></span>
+                        </label>
+                     
+                    <div  class="col-md-6 col-sm-6 col-xs-12" style="width: 510px;">
+                      <input type="text"  id="nomp" name="nomp"    class="  form-control  " value="{{p.productName}}">
+                    </div>    
+      </div>
+    <div class="item form-group">
+                        <label class="control-label col-md-3 col-smp.video-3 col-xs-12" for="textarea">Description <span class="required">:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12" style="width: 510px;">
+                          <textarea  id="contenup" name="contenup"  required="required" class="form-control col-md-7 col-xs-12"> {{p.productContent}}</textarea>
+                        </div>
+    </div>
+                       
+    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea"> <span class="required">Video:</span>
+                        </label>
+       
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                           <video width="480" height="300" controls>
+                                 <source src="{{asset('../web/Uploads/'~ p.video )}}" type="video/mp4">
+                           </video>
+                            <br>
+                            <div class="col-md-6 col-sm-6 col-xs-12" style="width: 492px; padding-left: 0px;">
+                                     {{form_widget(f)}}                         
+                            </div>   
+                        </div>
+                          
+    </div>
+                          
+
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea"><span class="required">Logo:</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12" >
+                            <img width="480" height="200" src="{{asset('../web/Uploads/'~ p.productPhoto)}}">
+                            
+                            <div class="col-md-6 col-sm-6 col-xs-12" style="width: 492px; padding-left: 0px;">
+                                <div style="height : 12px;"></div>
+                                <!--<input id="photop" name="photop" class="form-control custom-file-input" style="width : 480px;"  type="file" >!-->
+                                
+
+                                 </br>
+                        </div> 
+                    </div>
+                            <div class="ln_solid"></div>
+                    <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                                <input type="submit" class="btn btn-success" value="Edit" >
+                            
+                               
+                       
+                         </div>
+                      </div>
+                            </form>
+        <!--<form  class="control-label col-md-3 col-sm-3 col-xs-12"  >
+                           <button type="submit" class="btn btn-primary" action="{{path('esprit_hologram_front_products')}}">Cancel</button>
+                        </form>!-->
+     </div>
+     </div>
+    </div>
+</br>
+
+</br> </br> </br>
+
+{% endblock %}

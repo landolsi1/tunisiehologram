@@ -26,12 +26,7 @@ class EditProductForm extends AbstractType{
        $builder
        ->add('productName','text',array('attr' =>array('class'=>'form-control ')) )
        ->add('productContent','textarea',array('attr' =>array('class'=>' form-control')))
-      // ->add('video','file',array('attr' =>array('class'=>'item form-group form-control')))
-       //->add('productPhoto','file',array('attr' =>array('class'=>'item form-group form-control')))
-       //->add('Update','submit',array('attr' =>array('class'=>'btn btn-success')))
-      ;
-      
-       
+       ;
     }
     
     

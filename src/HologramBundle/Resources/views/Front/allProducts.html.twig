@@ -1,39 +1,41 @@
 {% extends is_granted('ROLE_SUPER_ADMIN')
     ? 'HologramBundle::layout.html.twig'
     : 'HologramBundle::layouts.html.twig' %}
+     {% block title %} 
+         <h2> List Of All Products </h2>
+         </br>
+                         {% endblock%}
+    
 {% block mainContent %}  
 
-    <div class="content">
-        <div class="container-fluid">
-            <div class="row">
-                 <div class="col-md-12">
-                    <div class="card card-plain">
-                        <div class="card-header" data-background-color="purple">
-                            <h4 class="title">Product</h4>
-                            <p class="category">List of all products</p>
-                        </div>
-                        <div class="card-content table-responsive">
+  
+                    
                             <table class="table table-hover">
                                 <thead>
-                                <th>Image</th>
-                                <th>Nom</th>
-                                <th>Date</th>
-                                <th>Etat</th>
-                                <th>Descrition</th>
+                               <th>Logo</th>
+											<th>Product Name</th>
+											<th>Date</th>
+											<th>Status</th>
+											<th>Product Description</th>
+                                                                                        <th>Edit</th>
                                 </thead>
                                 {% for p in prod  %}
                                     <tbody>
                                         <tr>
                                             <td><img width="50" height="50" src="{{asset('../web/Uploads/'~ p.productPhoto)}}"></td>
-                                            <td><a> <span>{{ p.productName }}</span></a></td>
+                                            <td class="w3-list-img"> <span>{{ p.productName }}</span></td>
                                             <td>{{ p.productDate|date('d/m/Y')}} </td>
-                                            <td>{% if p.etat == 'waiting' %}
+                                            <td>{% if p.etat == 'en attente' %}
                                                 <div class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Waiting</div>
                                                 {% elseif p.etat == 'valider' %}
                                                     <div class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Validate </div>
                                                     {% endif %}</td>
-                                                    <td><a>{{ p.productContent }}</a></td>
-                                                   
+                                                    <td>{{ p.productContent }}</a></td>
+                                                   <td>{% if p.etat == 'en attente' %}
+                                                       <a href="{{ path('esprit_hologram_update_product',{'id':p.idProduit}) }}"  class="btn btn-primary btn-xs" style="width: 80px;"><i class="fa fa-folder"></i> Edit </a>
+                                                   {% elseif p.etat == 'valider' %}
+                                                     <a href="{{ path('user_payement',{'id':p.idProduit}) }}"  class="btn btn-primary btn-xs" style="width: 80px;"><i class="fa fa-folder"></i> Payer </a>
+                                                      {% endif %}</td>
                                                 </tr>	                       	                                       
                                                 {% endfor %}
  

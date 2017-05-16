@@ -32,17 +32,37 @@ class DefaultController extends Controller
         return $this->render('FOSUserBundle::edit.html.twig');
     }
     
-    public function  paiementAction(){
+    public function  paiementAction($id){
         
-        
-       $em = $this->getDoctrine()->getManager();
+      $em = $this->getDoctrine()->getManager();
+       $product=$em->getRepository('HologramBundle:Product')->find($id);
+       $product->setEtat("paye");
+       
+       
        $paiement=new Payment();
        $form=$this->createForm(new PaymentForm(),$paiement);
         $request=$this->get('request');
         $form->handleRequest($request);
          if($form->isValid())
         {
-             
+
+            $em->persist($product);
+            $paiement->setIduser($this->getUser()->getId());
+            $paiement->setIdproduct($id);
+            $p = $form->get('idproduct')->getData();
+            if($p == "a"){
+                $paiement->setPrix(15);
+            } else if ($p == "b")  {
+                $paiement->setPrix(35);
+            } else if ($p == "c")  {
+                $paiement->setPrix(15);
+            } else if ($p == "d")  {
+                $paiement->setPrix(25);
+            } else if ($p == "e")  {
+                $paiement->setPrix(45);
+            } else if ($p == "f")  {
+                $paiement->setPrix(15);
+            } 
             $em->persist($paiement);
             $em->flush();
       

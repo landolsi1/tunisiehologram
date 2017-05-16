@@ -10,6 +10,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
         $this->parent = false;
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'mainContent' => array($this, 'block_mainContent'),
         );
     }
@@ -111,18 +112,18 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
             // line 67
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_add_product");
             echo "\">Add Product</a></li>
-\t\t                                        
-\t\t                                   
+\t\t                                                   
 \t\t                                        <li class=\"divider\"></li>
 \t\t                                        <li><a href=\"";
-            // line 71
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_my_products");
-            echo "\">My Product</a></li>\t\t                                        
-\t\t                                        <li class=\"divider\"></li>
-\t\t                                        <li><a href=\"";
-            // line 73
+            // line 70
             echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_front_products");
             echo "\">All Products</a></li>
+                                                          <li class=\"divider\"></li>
+\t\t                                        <li><a href=\"";
+            // line 72
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_front_final_products");
+            echo "\">Final Products</a></li>
+                         
 \t\t                                        <li class=\"divider\"></li>
 \t\t                                        <li><a href=\"#\">Statistics</a></li>
 \t\t                                    </ul>
@@ -209,45 +210,50 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t<div class=\"main main-raised\">
 \t\t<div class=\"section section-basic\">
 \t    \t<div class=\"container\">
+                   
 \t            <div class=\"title\">
-\t                <h2>Bienvenue</h2>
-\t            </div>
+                         ";
+        // line 141
+        $this->displayBlock('title', $context, $blocks);
+        // line 144
+        echo "\t            </div>
+                    
 ";
-        // line 142
+        // line 146
         $this->displayBlock('mainContent', $context, $blocks);
-        // line 218
+        // line 222
         echo "
 </body>
 
 \t<!--   Core JS Files   -->
 \t<script src=\"";
-        // line 222
+        // line 226
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/jquery.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 223
+        // line 227
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 224
+        // line 228
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/material.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 \t<script src=\"";
-        // line 227
+        // line 231
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/nouislider.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
 \t<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
 \t<script src=\"";
-        // line 230
+        // line 234
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/bootstrap-datepicker.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
 \t<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 \t<script src=\"";
-        // line 233
+        // line 237
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/material-kit.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
@@ -255,7 +261,15 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 ";
     }
 
-    // line 142
+    // line 141
+    public function block_title($context, array $blocks = array())
+    {
+        // line 142
+        echo "\t                <h2>Bienvenue</h2>
+                        ";
+    }
+
+    // line 146
     public function block_mainContent($context, array $blocks = array())
     {
         echo "  
@@ -299,7 +313,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"item active\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 182
+        // line 186
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg2.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -308,7 +322,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"item\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 188
+        // line 192
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg3.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -317,7 +331,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"item\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 194
+        // line 198
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg4.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -357,7 +371,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 
     public function getDebugInfo()
     {
-        return array (  321 => 194,  312 => 188,  303 => 182,  259 => 142,  251 => 233,  245 => 230,  239 => 227,  233 => 224,  229 => 223,  225 => 222,  219 => 218,  217 => 142,  194 => 122,  162 => 94,  157 => 92,  153 => 91,  148 => 89,  141 => 85,  133 => 79,  124 => 73,  119 => 71,  112 => 67,  102 => 60,  81 => 42,  59 => 23,  53 => 20,  49 => 19,  43 => 16,  39 => 15,  35 => 14,  20 => 1,);
+        return array (  335 => 198,  326 => 192,  317 => 186,  273 => 146,  268 => 142,  265 => 141,  257 => 237,  251 => 234,  245 => 231,  239 => 228,  235 => 227,  231 => 226,  225 => 222,  223 => 146,  219 => 144,  217 => 141,  195 => 122,  163 => 94,  158 => 92,  154 => 91,  149 => 89,  142 => 85,  134 => 79,  124 => 72,  119 => 70,  113 => 67,  103 => 60,  82 => 42,  60 => 23,  54 => 20,  50 => 19,  44 => 16,  40 => 15,  36 => 14,  21 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -437,12 +451,12 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t                                    \t<ul class=\"dropdown-menu dropdown-menu-right\">
 \t                                        \t<li class=\"dropdown-header\">Products</li>
 \t                                        \t<li><a href=\"{{ path('esprit_hologram_add_product')}}\">Add Product</a></li>
-\t\t                                        
-\t\t                                   
-\t\t                                        <li class=\"divider\"></li>
-\t\t                                        <li><a href=\"{{ path ('user_my_products')}}\">My Product</a></li>\t\t                                        
+\t\t                                                   
 \t\t                                        <li class=\"divider\"></li>
 \t\t                                        <li><a href=\"{{ path('esprit_hologram_front_products') }}\">All Products</a></li>
+                                                          <li class=\"divider\"></li>
+\t\t                                        <li><a href=\"{{ path('esprit_hologram_front_final_products') }}\">Final Products</a></li>
+                         
 \t\t                                        <li class=\"divider\"></li>
 \t\t                                        <li><a href=\"#\">Statistics</a></li>
 \t\t                                    </ul>
@@ -508,9 +522,13 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t<div class=\"main main-raised\">
 \t\t<div class=\"section section-basic\">
 \t    \t<div class=\"container\">
+                   
 \t            <div class=\"title\">
+                         {% block title %}
 \t                <h2>Bienvenue</h2>
+                        {% endblock %}
 \t            </div>
+                    
 {% block mainContent %}  
 \t\t        <div id=\"buttons\">
 \t\t\t\t\t<div class=\"title\">

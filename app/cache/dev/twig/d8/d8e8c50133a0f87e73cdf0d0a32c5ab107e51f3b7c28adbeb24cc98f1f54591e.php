@@ -8,6 +8,7 @@ class __TwigTemplate_778574f19f2aa31ef98ded3efab31d13ba62fe0d3d6e400afb2fa39380b
         parent::__construct($env);
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'mainContent' => array($this, 'block_mainContent'),
         );
     }
@@ -24,74 +25,93 @@ class __TwigTemplate_778574f19f2aa31ef98ded3efab31d13ba62fe0d3d6e400afb2fa39380b
     }
 
     // line 4
+    public function block_title($context, array $blocks = array())
+    {
+        echo " 
+         <h2> List Of All Products </h2>
+         </br>
+                         ";
+    }
+
+    // line 9
     public function block_mainContent($context, array $blocks = array())
     {
         echo "  
 
-    <div class=\"content\">
-        <div class=\"container-fluid\">
-            <div class=\"row\">
-                 <div class=\"col-md-12\">
-                    <div class=\"card card-plain\">
-                        <div class=\"card-header\" data-background-color=\"purple\">
-                            <h4 class=\"title\">Product</h4>
-                            <p class=\"category\">List of all products</p>
-                        </div>
-                        <div class=\"card-content table-responsive\">
+  
+                    
                             <table class=\"table table-hover\">
                                 <thead>
-                                <th>Image</th>
-                                <th>Nom</th>
-                                <th>Date</th>
-                                <th>Etat</th>
-                                <th>Descrition</th>
+                               <th>Logo</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Product Name</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Date</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Status</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Product Description</th>
+                                                                                        <th>Edit</th>
                                 </thead>
                                 ";
-        // line 24
+        // line 22
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["prod"]) ? $context["prod"] : $this->getContext($context, "prod")));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 25
+            // line 23
             echo "                                    <tbody>
                                         <tr>
                                             <td><img width=\"50\" height=\"50\" src=\"";
-            // line 27
+            // line 25
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl(("../web/Uploads/" . $this->getAttribute($context["p"], "productPhoto", array()))), "html", null, true);
             echo "\"></td>
-                                            <td><a> <span>";
-            // line 28
+                                            <td class=\"w3-list-img\"> <span>";
+            // line 26
             echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "productName", array()), "html", null, true);
-            echo "</span></a></td>
+            echo "</span></td>
                                             <td>";
-            // line 29
+            // line 27
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["p"], "productDate", array()), "d/m/Y"), "html", null, true);
             echo " </td>
                                             <td>";
-            // line 30
-            if (($this->getAttribute($context["p"], "etat", array()) == "waiting")) {
-                // line 31
+            // line 28
+            if (($this->getAttribute($context["p"], "etat", array()) == "en attente")) {
+                // line 29
                 echo "                                                <div class=\"btn btn-danger btn-xs\"><i class=\"fa fa-trash-o\"></i> Waiting</div>
                                                 ";
-            } elseif (($this->getAttribute(            // line 32
+            } elseif (($this->getAttribute(            // line 30
 $context["p"], "etat", array()) == "valider")) {
-                // line 33
+                // line 31
                 echo "                                                    <div class=\"btn btn-info btn-xs\"><i class=\"fa fa-pencil\"></i> Validate </div>
                                                     ";
             }
-            // line 34
+            // line 32
             echo "</td>
-                                                    <td><a>";
-            // line 35
+                                                    <td>";
+            // line 33
             echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "productContent", array()), "html", null, true);
             echo "</a></td>
-                                                   
+                                                   <td>";
+            // line 34
+            if (($this->getAttribute($context["p"], "etat", array()) == "en attente")) {
+                // line 35
+                echo "                                                       <a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_update_product", array("id" => $this->getAttribute($context["p"], "idProduit", array()))), "html", null, true);
+                echo "\"  class=\"btn btn-primary btn-xs\" style=\"width: 80px;\"><i class=\"fa fa-folder\"></i> Edit </a>
+                                                   ";
+            } elseif (($this->getAttribute(            // line 36
+$context["p"], "etat", array()) == "valider")) {
+                // line 37
+                echo "                                                     <a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_payement", array("id" => $this->getAttribute($context["p"], "idProduit", array()))), "html", null, true);
+                echo "\"  class=\"btn btn-primary btn-xs\" style=\"width: 80px;\"><i class=\"fa fa-folder\"></i> Payer </a>
+                                                      ";
+            }
+            // line 38
+            echo "</td>
                                                 </tr>\t                       \t                                       
                                                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 41
         echo " 
                                                 </tbody>
 
@@ -118,7 +138,7 @@ $context["p"], "etat", array()) == "valider")) {
 
     public function getDebugInfo()
     {
-        return array (  95 => 39,  85 => 35,  82 => 34,  78 => 33,  76 => 32,  73 => 31,  71 => 30,  67 => 29,  63 => 28,  59 => 27,  55 => 25,  51 => 24,  27 => 4,  18 => 3,);
+        return array (  115 => 41,  107 => 38,  101 => 37,  99 => 36,  94 => 35,  92 => 34,  88 => 33,  85 => 32,  81 => 31,  79 => 30,  76 => 29,  74 => 28,  70 => 27,  66 => 26,  62 => 25,  58 => 23,  54 => 22,  37 => 9,  28 => 4,  19 => 3,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -134,39 +154,41 @@ $context["p"], "etat", array()) == "valider")) {
         return new Twig_Source("{% extends is_granted('ROLE_SUPER_ADMIN')
     ? 'HologramBundle::layout.html.twig'
     : 'HologramBundle::layouts.html.twig' %}
+     {% block title %} 
+         <h2> List Of All Products </h2>
+         </br>
+                         {% endblock%}
+    
 {% block mainContent %}  
 
-    <div class=\"content\">
-        <div class=\"container-fluid\">
-            <div class=\"row\">
-                 <div class=\"col-md-12\">
-                    <div class=\"card card-plain\">
-                        <div class=\"card-header\" data-background-color=\"purple\">
-                            <h4 class=\"title\">Product</h4>
-                            <p class=\"category\">List of all products</p>
-                        </div>
-                        <div class=\"card-content table-responsive\">
+  
+                    
                             <table class=\"table table-hover\">
                                 <thead>
-                                <th>Image</th>
-                                <th>Nom</th>
-                                <th>Date</th>
-                                <th>Etat</th>
-                                <th>Descrition</th>
+                               <th>Logo</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Product Name</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Date</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Status</th>
+\t\t\t\t\t\t\t\t\t\t\t<th>Product Description</th>
+                                                                                        <th>Edit</th>
                                 </thead>
                                 {% for p in prod  %}
                                     <tbody>
                                         <tr>
                                             <td><img width=\"50\" height=\"50\" src=\"{{asset('../web/Uploads/'~ p.productPhoto)}}\"></td>
-                                            <td><a> <span>{{ p.productName }}</span></a></td>
+                                            <td class=\"w3-list-img\"> <span>{{ p.productName }}</span></td>
                                             <td>{{ p.productDate|date('d/m/Y')}} </td>
-                                            <td>{% if p.etat == 'waiting' %}
+                                            <td>{% if p.etat == 'en attente' %}
                                                 <div class=\"btn btn-danger btn-xs\"><i class=\"fa fa-trash-o\"></i> Waiting</div>
                                                 {% elseif p.etat == 'valider' %}
                                                     <div class=\"btn btn-info btn-xs\"><i class=\"fa fa-pencil\"></i> Validate </div>
                                                     {% endif %}</td>
-                                                    <td><a>{{ p.productContent }}</a></td>
-                                                   
+                                                    <td>{{ p.productContent }}</a></td>
+                                                   <td>{% if p.etat == 'en attente' %}
+                                                       <a href=\"{{ path('esprit_hologram_update_product',{'id':p.idProduit}) }}\"  class=\"btn btn-primary btn-xs\" style=\"width: 80px;\"><i class=\"fa fa-folder\"></i> Edit </a>
+                                                   {% elseif p.etat == 'valider' %}
+                                                     <a href=\"{{ path('user_payement',{'id':p.idProduit}) }}\"  class=\"btn btn-primary btn-xs\" style=\"width: 80px;\"><i class=\"fa fa-folder\"></i> Payer </a>
+                                                      {% endif %}</td>
                                                 </tr>\t                       \t                                       
                                                 {% endfor %}
  

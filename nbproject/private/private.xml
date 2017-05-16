@@ -3,18 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/layouts.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Controller/DefaultController.php</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/layout.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Default/layout.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Front/allProducts.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Verification.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Front/productWaitingLaunch.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Default/index.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/config/routing.yml</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Front/myProducts.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Front/newProduct.html.twig</file>
-            <file>file:/C:/wamp/www/TunisieHologram/src/HologramBundle/Resources/views/Front/index.html.twig</file>
+            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Controller/ProductController.php</file>
+            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Resources/views/Front/Payement.html.twig</file>
         </group>
     </open-files>
 </project-private>

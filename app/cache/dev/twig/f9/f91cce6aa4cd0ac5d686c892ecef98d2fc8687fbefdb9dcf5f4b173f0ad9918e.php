@@ -8,6 +8,7 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
         parent::__construct($env);
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'mainContent' => array($this, 'block_mainContent'),
         );
     }
@@ -24,9 +25,21 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
     }
 
     // line 4
+    public function block_title($context, array $blocks = array())
+    {
+        echo " 
+          <span> <h2 style=\" color: #73879C;\"> Payment Product </h2> </span>
+         </br>
+                         ";
+    }
+
+    // line 8
     public function block_mainContent($context, array $blocks = array())
     {
-        echo "          
+        echo " 
+     
+    
+    
 <!-- New Product -->
 <div class=\"container\">
     <div style=\"padding-left: 300px; width: 800px; color: #73879C;\">
@@ -35,10 +48,10 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
         
           </br>
      </br>
-     <span> <h3 style=\"padding-left: 200px; color: #73879C;\"> Payement Product </h3> </span>
+   
      </br>
     ";
-        // line 15
+        // line 22
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'form');
         echo "
    
@@ -67,7 +80,7 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
 
     public function getDebugInfo()
     {
-        return array (  42 => 15,  27 => 4,  18 => 3,);
+        return array (  55 => 22,  37 => 8,  28 => 4,  19 => 3,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -83,7 +96,14 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
         return new Twig_Source("{% extends is_granted('ROLE_SUPER_ADMIN')
     ? 'HologramBundle::layout.html.twig'
     : 'HologramBundle::layouts.html.twig' %}
-{% block mainContent %}          
+    {% block title %} 
+          <span> <h2 style=\" color: #73879C;\"> Payment Product </h2> </span>
+         </br>
+                         {% endblock%}
+{% block mainContent %} 
+     
+    
+    
 <!-- New Product -->
 <div class=\"container\">
     <div style=\"padding-left: 300px; width: 800px; color: #73879C;\">
@@ -92,7 +112,7 @@ class __TwigTemplate_4849ebaac4a2fbfbeb21ea9a54ef472a5dec6a1a3fa40c36afd299310b3
         
           </br>
      </br>
-     <span> <h3 style=\"padding-left: 200px; color: #73879C;\"> Payement Product </h3> </span>
+   
      </br>
     {{form(f)}}
    

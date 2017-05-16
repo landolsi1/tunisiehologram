@@ -65,12 +65,12 @@
 	                                    	<ul class="dropdown-menu dropdown-menu-right">
 	                                        	<li class="dropdown-header">Products</li>
 	                                        	<li><a href="{{ path('esprit_hologram_add_product')}}">Add Product</a></li>
-		                                        
-		                                   
-		                                        <li class="divider"></li>
-		                                        <li><a href="{{ path ('user_my_products')}}">My Product</a></li>		                                        
+		                                                   
 		                                        <li class="divider"></li>
 		                                        <li><a href="{{ path('esprit_hologram_front_products') }}">All Products</a></li>
+                                                          <li class="divider"></li>
+		                                        <li><a href="{{ path('esprit_hologram_front_final_products') }}">Final Products</a></li>
+                         
 		                                        <li class="divider"></li>
 		                                        <li><a href="#">Statistics</a></li>
 		                                    </ul>
@@ -136,9 +136,13 @@
 	<div class="main main-raised">
 		<div class="section section-basic">
 	    	<div class="container">
+                   
 	            <div class="title">
+                         {% block title %}
 	                <h2>Bienvenue</h2>
+                        {% endblock %}
 	            </div>
+                    
 {% block mainContent %}  
 		        <div id="buttons">
 					<div class="title">

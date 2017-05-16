@@ -116,10 +116,7 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 \t                    </a>
 \t                </li>
                         <li>
-                               <a href=\"";
-            // line 65
-            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("user_my_products");
-            echo "\">
+                               <a href=\"#\">
 \t                        <i class=\"material-icons\">person</i>
 \t                        <p>My Products</p>
 \t                    </a>
@@ -164,10 +161,10 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 \t                <li >
 \t                    <a href=\"";
         // line 94
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_front_products");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_view_validate_products");
         echo "\">
 \t                        <i class=\"material-icons\">content_paste</i>
-\t                        <p>Products List</p>
+\t                        <p>Valid Products</p>
 \t                    </a>
 \t                </li>
                         
@@ -175,7 +172,7 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
      
 \t                    <a href=\"";
         // line 102
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_front_products_waiting");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram");
         echo "\">
 \t                        <i class=\"material-icons text-gray\">notifications</i>
 \t                        <p>Waiting Confiramtion</p>
@@ -260,7 +257,7 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
         $this->displayBlock('dashboard', $context, $blocks);
         // line 180
         $this->displayBlock('mainContent', $context, $blocks);
-        // line 181
+        // line 182
         echo "\t                </div>
 \t            </div>
 \t        </div>
@@ -288,45 +285,45 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 
 \t<!--   Core JS Files   -->
 \t<script src=\"";
-        // line 207
+        // line 208
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/jquery-3.1.0.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 208
+        // line 209
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/bootstrap.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 209
+        // line 210
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/material.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
 \t<!--  Charts Plugin -->
 \t<script src=\"";
-        // line 212
+        // line 213
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/chartist.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<!--  Notifications Plugin    -->
 \t<script src=\"";
-        // line 215
+        // line 216
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/bootstrap-notify.js"), "html", null, true);
         echo "\"></script>
 
 \t<!--  Google Maps Plugin    -->
 \t<script type=\"text/javascript\" src=\"";
-        // line 218
+        // line 219
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("https://maps.googleapis.com/maps/api/js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Material Dashboard javascript methods -->
 \t<script src=\"";
-        // line 221
+        // line 222
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/material-dashboard.js"), "html", null, true);
         echo "\"></script>
 
 \t<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 \t<script src=\"";
-        // line 224
+        // line 225
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("bundles/hologram/assets/js/demo.js"), "html", null, true);
         echo "\"></script>
 
@@ -349,7 +346,8 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
     // line 180
     public function block_mainContent($context, array $blocks = array())
     {
-        echo "   ";
+        echo "   
+";
     }
 
     public function getTemplateName()
@@ -364,7 +362,7 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 
     public function getDebugInfo()
     {
-        return array (  350 => 180,  344 => 179,  339 => 178,  330 => 224,  324 => 221,  318 => 218,  312 => 215,  306 => 212,  300 => 209,  296 => 208,  292 => 207,  264 => 181,  262 => 180,  259 => 179,  257 => 178,  178 => 102,  167 => 94,  162 => 91,  153 => 85,  144 => 79,  139 => 76,  130 => 71,  121 => 65,  112 => 59,  107 => 57,  98 => 51,  78 => 34,  67 => 26,  63 => 25,  57 => 22,  51 => 19,  45 => 16,  32 => 6,  28 => 5,  22 => 1,);
+        return array (  347 => 180,  341 => 179,  336 => 178,  327 => 225,  321 => 222,  315 => 219,  309 => 216,  303 => 213,  297 => 210,  293 => 209,  289 => 208,  261 => 182,  259 => 180,  256 => 179,  254 => 178,  175 => 102,  164 => 94,  159 => 91,  150 => 85,  141 => 79,  136 => 76,  127 => 71,  112 => 59,  107 => 57,  98 => 51,  78 => 34,  67 => 26,  63 => 25,  57 => 22,  51 => 19,  45 => 16,  32 => 6,  28 => 5,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -441,7 +439,7 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 \t                    </a>
 \t                </li>
                         <li>
-                               <a href=\"{{ path ('user_my_products')}}\">
+                               <a href=\"#\">
 \t                        <i class=\"material-icons\">person</i>
 \t                        <p>My Products</p>
 \t                    </a>
@@ -470,15 +468,15 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
                         
                        
 \t                <li >
-\t                    <a href=\"{{ path('esprit_hologram_front_products') }}\">
+\t                    <a href=\"{{ path('esprit_hologram_view_validate_products') }}\">
 \t                        <i class=\"material-icons\">content_paste</i>
-\t                        <p>Products List</p>
+\t                        <p>Valid Products</p>
 \t                    </a>
 \t                </li>
                         
  <li>
      
-\t                    <a href=\"{{ path('esprit_hologram_front_products_waiting') }}\">
+\t                    <a href=\"{{ path('esprit_hologram') }}\">
 \t                        <i class=\"material-icons text-gray\">notifications</i>
 \t                        <p>Waiting Confiramtion</p>
 \t                    </a>
@@ -556,7 +554,8 @@ class __TwigTemplate_4642bff8e93354e45ab5f0b42e10b6579e1acc92b682870ea87129a6010
 \t                <div class=\"row\">
                             {% block fos_user_content %}{% endblock %}
                            {% block dashboard %}  {% endblock %}
-{% block mainContent %}   {% endblock %}
+{% block mainContent %}   
+{% endblock %}
 \t                </div>
 \t            </div>
 \t        </div>

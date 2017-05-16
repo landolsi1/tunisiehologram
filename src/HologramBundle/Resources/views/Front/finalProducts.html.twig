@@ -1,0 +1,41 @@
+{% extends "HologramBundle::layouts.html.twig" %}
+{% block title %} 
+    <h2> Final Products  </h2>
+{%endblock %}
+{% block mainContent %}  
+
+    <!--/content-inner-section-->
+       <div class="w3_content_agilleinfo_inner">
+	    <div class="agile_featured_movies">
+	      <!--/comedy-movies-->
+	   
+                 {% for p in prod  %}
+		 <div class="wthree_agile-requested-movies tv-movies">
+		    <div class="col-md-2 w3l-movie-gride-agile requested-movies">
+			<a href="{{ path('esprit_hologram_view_video',{'id':p.idProduit}) }}" class="hvr-sweep-to-bottom"><img src="{{asset('../web/Uploads/'~ p.productPhoto)}}" title="Movies Pro" class="img-responsive" alt=" ">			
+			   <div class="w3l-action-icon"><i class="fa fa-play-circle-o" aria-hidden="true"></i></div>
+			</a>
+			<div class="mid-1 agileits_w3layouts_mid_1_home">
+			    <div class="w3l-movie-text">
+                                <h3><a  href="{{ path('esprit_hologram_view_video',{'id':p.idProduit}) }}">{{p.productName}}</a></h3>							
+			    </div>
+		            <div class="mid-2 agile_mid_2_home">
+				<p>{{p.productDate|date('d/m/Y')}}</p>
+																		
+			      <div class="clearfix"></div>
+			    </div>
+			</div>
+			<div class="ribben one">													
+			
+			</div>
+		    </div>
+                 </div>
+                 {% endfor %}
+            </div>
+       </div>
+    
+                     
+<!--/content-inner-section-->
+    
+ {% endblock %}
+ 

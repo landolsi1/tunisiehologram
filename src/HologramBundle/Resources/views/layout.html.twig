@@ -62,7 +62,7 @@
 	                    </a>
 	                </li>
                         <li>
-                               <a href="{{ path ('user_my_products')}}">
+                               <a href="#">
 	                        <i class="material-icons">person</i>
 	                        <p>My Products</p>
 	                    </a>
@@ -91,15 +91,15 @@
                         
                        
 	                <li >
-	                    <a href="{{ path('esprit_hologram_front_products') }}">
+	                    <a href="{{ path('esprit_hologram_view_validate_products') }}">
 	                        <i class="material-icons">content_paste</i>
-	                        <p>Products List</p>
+	                        <p>Valid Products</p>
 	                    </a>
 	                </li>
                         
  <li>
      
-	                    <a href="{{ path('esprit_hologram_front_products_waiting') }}">
+	                    <a href="{{ path('esprit_hologram') }}">
 	                        <i class="material-icons text-gray">notifications</i>
 	                        <p>Waiting Confiramtion</p>
 	                    </a>
@@ -177,7 +177,8 @@
 	                <div class="row">
                             {% block fos_user_content %}{% endblock %}
                            {% block dashboard %}  {% endblock %}
-{% block mainContent %}   {% endblock %}
+{% block mainContent %}   
+{% endblock %}
 	                </div>
 	            </div>
 	        </div>

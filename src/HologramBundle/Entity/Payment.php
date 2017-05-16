@@ -33,18 +33,6 @@ class Payment
      */
     private $prix;
 
-    /**
-     * @var float
-     *
-     * @ORM\Column(name="total", type="float", precision=10, scale=0, nullable=false)
-     */
-    private $total;
-     /**
-     * @var string
-     *
-     * @ORM\Column(name="ccv", type="integer")
-     */
-    private $ccv;
      /**
      * @var string
      *
@@ -148,30 +136,7 @@ class Payment
         return $this->prix;
     }
 
-    /**
-     * Set total
-     *
-     * @param float $total
-     *
-     * @return Payment
-     */
-    public function setTotal($total)
-    {
-        $this->total = $total;
-
-        return $this;
-    }
-
-    /**
-     * Get total
-     *
-     * @return float
-     */
-    public function getTotal()
-    {
-        return $this->total;
-    }
-
+   
     /**
      * Set verification
      *
@@ -205,12 +170,6 @@ class Payment
     {
         return $this->id;
     }
-    
-    
-    
-    function getCcv() {
-        return $this->ccv;
-    }
 
     function getExpirationDate() {
         return $this->ExpirationDate;
@@ -225,9 +184,6 @@ class Payment
         return $this->cardnumber;
     }
 
-    function setCcv($ccv) {
-        $this->ccv = $ccv;
-    }
 
    
 
