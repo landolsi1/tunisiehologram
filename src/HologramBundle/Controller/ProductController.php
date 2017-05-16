@@ -110,6 +110,8 @@ class ProductController extends Controller{
             $file1 = array("tmp_name" => $productPhoto->getPathname(),
                 "type" => $productPhoto->getMimeType()
             );
+           
+            
             $product->setVideo($upload->uploadFile($file));
             $product->setProductPhoto($upload->uploadFile($file1));
             $product->setProductDate(new \DateTime('now'));
@@ -228,12 +230,16 @@ class ProductController extends Controller{
       
          if($form1->isValid())
         {
+           
+            
             $upload = new Upload("", "../web/Uploads/", 0, 0);
             $productVideo=$form1->get('finalVideo')->getData();
             $file = array("tmp_name" => $productVideo->getPathname(),
                 "type" => $productVideo->getMimeType()
             );
             
+            $upload1 = new Upload("", "C:\\wamp\\www\\tizen\\images\\", 0, 0);
+            $product->setFinalVid($upload1->uploadFile($file));
             $product->setFinalVideo($upload->uploadFile($file));
             $em->persist($product);
             $em->flush();

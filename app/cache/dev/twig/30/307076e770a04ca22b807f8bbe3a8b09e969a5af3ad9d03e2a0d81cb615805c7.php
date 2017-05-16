@@ -8,7 +8,7 @@ class __TwigTemplate_d805447d0330b05e71280a5c388ff666a2990cfd1d4e625376726d37ab8
         parent::__construct($env);
 
         // line 1
-        $this->parent = $this->loadTemplate("HologramBundle::layout.html.twig", "HologramBundle:Front:oneProduct.html.twig", 1);
+        $this->parent = $this->loadTemplate("HologramBundle::layouts.html.twig", "HologramBundle:Front:oneProduct.html.twig", 1);
         $this->blocks = array(
             'mainContent' => array($this, 'block_mainContent'),
         );
@@ -16,7 +16,7 @@ class __TwigTemplate_d805447d0330b05e71280a5c388ff666a2990cfd1d4e625376726d37ab8
 
     protected function doGetParent(array $context)
     {
-        return "HologramBundle::layout.html.twig";
+        return "HologramBundle::layouts.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -158,7 +158,7 @@ class __TwigTemplate_d805447d0330b05e71280a5c388ff666a2990cfd1d4e625376726d37ab8
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"HologramBundle::layout.html.twig\" %}
+        return new Twig_Source("{% extends \"HologramBundle::layouts.html.twig\" %}
 {% block mainContent %}
       <link href=\"{{asset('Front/css/FileCSS.css')}}\" rel=\"stylesheet\" type=\"text/css\" />
     <div class=\"container\">

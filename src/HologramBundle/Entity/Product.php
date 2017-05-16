@@ -72,6 +72,13 @@ class Product {
      */
     private $finalVideo = null;
     
+    /**
+     * @ORM\Column(type="string", length=255,  nullable=true))
+     * @@Assert\File(maxSize="2147483648")
+     */
+    private $finalVid = null;
+
+    
     function getIdProduit() {
         return $this->idProduit;
     }
@@ -142,6 +149,14 @@ class Product {
 
     function setFinalVideo($finalVideo) {
         $this->finalVideo = $finalVideo;
+    }
+
+    function getFinalVid() {
+        return $this->finalVid;
+    }
+
+    function setFinalVid($finalVid) {
+        $this->finalVid = $finalVid;
     }
 
 
