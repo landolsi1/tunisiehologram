@@ -54,6 +54,20 @@ class Payment
     private $verification;
 
     /**
+     * @ORM\Column(type="datetime")
+     */
+    private $dateDeb;
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $heureDeb;
+    
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $heureFin;
+
+    /**
      * @var integer
      *
      * @ORM\Column(name="id", type="integer")
@@ -61,8 +75,6 @@ class Payment
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
-
-
 
     /**
      * Set idproduct
@@ -183,12 +195,33 @@ class Payment
     function getCardnumber() {
         return $this->cardnumber;
     }
-
-
-   
-
+    
     function setCardnumber($cardnumber) {
         $this->cardnumber = $cardnumber;
+    }
+
+    function getDateDeb() {
+        return $this->dateDeb;
+    }
+
+    function getHeureDeb() {
+        return $this->heureDeb;
+    }
+
+    function getHeureFin() {
+        return $this->heureFin;
+    }
+
+    function setDateDeb($dateDeb) {
+        $this->dateDeb = $dateDeb;
+    }
+
+    function setHeureDeb($heureDeb) {
+        $this->heureDeb = $heureDeb;
+    }
+
+    function setHeureFin($heureFin) {
+        $this->heureFin = $heureFin;
     }
 
 

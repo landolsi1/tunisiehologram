@@ -52,17 +52,30 @@ class DefaultController extends Controller
             $p = $form->get('idproduct')->getData();
             if($p == "a"){
                 $paiement->setPrix(15);
+                $paiement->setHeureDeb("08:00");
+                $paiement->setHeureFin("12:00");
             } else if ($p == "b")  {
                 $paiement->setPrix(35);
+                $paiement->setHeureDeb("12:00");
+                $paiement->setHeureFin("14:00");
             } else if ($p == "c")  {
                 $paiement->setPrix(15);
+                $paiement->setHeureDeb("14:00");
+                $paiement->setHeureFin("16:00");
             } else if ($p == "d")  {
                 $paiement->setPrix(25);
+                $paiement->setHeureDeb("16:00");
+                $paiement->setHeureFin("17:30");
             } else if ($p == "e")  {
                 $paiement->setPrix(45);
+                $paiement->setHeureDeb("17:30");
+                $paiement->setHeureFin("20:3s0");
             } else if ($p == "f")  {
                 $paiement->setPrix(15);
+                $paiement->setHeureDeb("20:30");
+                $paiement->setHeureFin("22:00");
             } 
+            
             $em->persist($paiement);
             $em->flush();
       

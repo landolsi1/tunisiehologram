@@ -26,7 +26,8 @@ class PaymentForm  extends AbstractType{
         
        $builder
        ->add('CardNumber','text',array('attr' =>array('class'=>'form-control col-md-7 col-xs-12')) )
-       ->add('verification','text',array('attr' =>array('class'=>'form-control col-md-7 col-xs-12')) )       
+       ->add('verification','text',array('attr' =>array('class'=>'form-control col-md-7 col-xs-12')) )
+       ->add('dateDeb','date',array('attr' =>array('class'=>'item form-group form-control')))
        ->add('ExpirationDate','date',array('attr' =>array('class'=>'item form-group form-control')))
        ->add('idproduct', 'choice', array(
        'choices'   => array('a' => 'From 08:00 - 12:00 15$/Publicity ', 
