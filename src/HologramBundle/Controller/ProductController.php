@@ -140,22 +140,19 @@ class ProductController extends Controller{
         $p=$product->getProductPhoto();
         $v=$product->getVideo();
         
-      $form = $this->createFormBuilder($product)
-        ->add('video','file', array('data_class' => null, 'required' => false,'attr' =>array('class'=>' form-control custom-file-input'),'label'=>' '))
-       ->add('productPhoto','file', array('data_class' => null, 'required' => false,'attr' =>array('class'=>' form-control custom-file-input'),'label'=>' '))
+      /*$form = $this->createFormBuilder($product)
+        ->add('video','file', array('data_class' => null, 'required' => false,'attr' =>array('class'=>' form-control custom-file-input'),'label'=>'Update your video '))
+       ->add('productPhoto','file', array('data_class' => null, 'required' => false,'attr' =>array('class'=>' form-control custom-file-input'),'label'=>'Update your logo '))
        ->getForm();
-       
+       */
       $request = $this->get('request');   
-     
       if($request->getMethod()=='POST')
      { 
-       
-        $form->handleRequest($request);
-        if ($form->isValid()) {
-            
             $upload = new Upload("", "../web/Uploads/", 0, 0);
-            $productPhoto=$form->get('productPhoto')->getData();
-            
+           
+            $video=$this->getRequest()->files->get('file'); 
+            $productPhoto = $this->getRequest()->files->get('upload2'); 
+             
             if($productPhoto != null)
             { $file1 = array("tmp_name" => $productPhoto->getPathname(),
                 "type" => $productPhoto->getMimeType()
@@ -166,18 +163,18 @@ class ProductController extends Controller{
             }
             
             //video
-             $video=$form->get('video')->getData();
+            
+            
              if($video != null)
             { $file2 = array("tmp_name" => $video->getPathname(),
                 "type" => $video->getMimeType()
             );
             $product->setVideo($upload->uploadFile($file2));
             }else{
-
                 $product->setVideo($v);
             }
             
-         }
+         
         $n=$request->get('nomp');
         $c=$request->get('contenup');
         if ($product->getEtat() ==  "valider"){
@@ -189,9 +186,11 @@ class ProductController extends Controller{
         $em->persist($product);
         $em->flush();
          return $this->redirectToRoute('esprit_hologram_front_products');
-      }
+      
+
+}
          return $this->render('HologramBundle:Front:oneProduct.html.twig',
-                array('p'=>$product,'f'=>$form->createView()));
+                 array('p'=>$product,'id'=>$id));
 
       }
     
@@ -219,38 +218,30 @@ class ProductController extends Controller{
        /* $form1 = $this->createFormBuilder($product)
         ->add('finalVideo','file',array('data_class' => null,'attr' =>array('class'=>'form-control custom-file-input'),'label'=>' ')) 
         ->getForm();*/
-         
-     $form1 =$this->createForm(new AddFinalVideoForm(),$product);
-     $request = $this->get('request');   
-     
-    if($request->getMethod()=='POST')
-    { 
-       
-     $form1->handleRequest($request);
-      
-         if($form1->isValid())
-        {
+    
+     $request = $this->get('request'); 
            
-            
-            $upload = new Upload("", "../web/Uploads/", 0, 0);
-            $productVideo=$form1->get('finalVideo')->getData();
-            $file = array("tmp_name" => $productVideo->getPathname(),
-                "type" => $productVideo->getMimeType()
+     if($request->getMethod()=='POST')
+    { 
+         $data = $this->getRequest()->request->all();
+         $file1 = $this->getRequest()->files->get('file'); 
+         $upload = new Upload("", "../web/Uploads/", 0, 0);
+
+            $file = array("tmp_name" => $file1->getPathname(),
+                "type" => $file1->getMimeType()
             );
             
-            $upload1 = new Upload("", "C:\\wamp\\www\\tizen\\images\\", 0, 0);
+            $upload1 = new Upload("", "C:\\wamp\\www\\hologamme\\uploads\\", 0, 0);
             $product->setFinalVid($upload1->uploadFile($file));
             $product->setFinalVideo($upload->uploadFile($file));
             $em->persist($product);
             $em->flush();
             
-        return $this->redirectToRoute('esprit_hologram_view_validate_products');
-        }  
-          
-        
-      }
+        return $this->redirectToRoute('esprit_hologram_view_validate_products');  
+    }  
+      
       return $this->render('HologramBundle:Back:addFinalVideo.html.twig',
-                array('f'=>$form1->createView(),'p'=>$product,'video'=>$videoPath,'img'=>$imgPath,"d"=>$date));
+                array('p'=>$product,'video'=>$videoPath,'img'=>$imgPath,"d"=>$date,'id'=>$id));
       }
       
      }

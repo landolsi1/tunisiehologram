@@ -26,7 +26,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t<link rel=\"icon\" type=\"image/png\" href=\"assets/img/favicon.png\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />
 
-\t<title>Material Kit by Creative Tim</title>
+\t<title>Tunisie Hologram</title>
 
 \t<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -94,7 +94,10 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t    <div class=\"collapse navbar-collapse\" id=\"navigation-index\">
 \t    \t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t<li>
-\t\t\t\t\t<a href=\"components-documentation.html\" target=\"_blank\">
+\t\t\t\t\t<a href=\"";
+        // line 56
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("hologram_homepage");
+        echo "\">
 \t\t\t\t\t\t<i class=\"material-icons\">dashboard</i> Home
 \t\t\t\t\t</a>
 \t\t\t\t</li>
@@ -221,39 +224,39 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 ";
         // line 146
         $this->displayBlock('mainContent', $context, $blocks);
-        // line 222
+        // line 206
         echo "
 </body>
 
 \t<!--   Core JS Files   -->
 \t<script src=\"";
-        // line 226
+        // line 210
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/jquery.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 227
+        // line 211
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/bootstrap.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 \t<script src=\"";
-        // line 228
+        // line 212
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/material.min.js"), "html", null, true);
         echo "\"></script>
 
 \t<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
 \t<script src=\"";
-        // line 231
+        // line 215
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/nouislider.min.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
 \t<!--  Plugin for the Datepicker, full documentation here: http://www.eyecon.ro/bootstrap-datepicker/ -->
 \t<script src=\"";
-        // line 234
+        // line 218
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/bootstrap-datepicker.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
 \t<!-- Control Center for Material Kit: activating the ripples, parallax effects, scripts from the example pages etc -->
 \t<script src=\"";
-        // line 237
+        // line 221
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/js/material-kit.js"), "html", null, true);
         echo "\" type=\"text/javascript\"></script>
 
@@ -273,25 +276,9 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
     public function block_mainContent($context, array $blocks = array())
     {
         echo "  
-\t\t        <div id=\"buttons\">
-\t\t\t\t\t<div class=\"title\">
-\t\t\t\t\t\t<h3>Buttons <br />
-\t\t\t\t\t\t\t<small>Pick your style</small>
-\t\t\t\t\t\t</h3>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
-\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Default</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-round\">Round</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-round\">
-\t\t\t\t\t\t\t\t<i class=\"material-icons\">favorite</i> With Icon
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-fab btn-fab-mini btn-round\">
-\t\t\t\t\t\t\t\t<i class=\"material-icons\">favorite</i>
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-simple\">Simple</button>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+\t\t      
+\t\t\t\t\t
+\t\t\t\t
                              <div class=\"section\" id=\"carousel\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
@@ -313,7 +300,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t<div class=\"carousel-inner\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"item active\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 186
+        // line 170
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg2.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -322,7 +309,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"item\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 192
+        // line 176
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg3.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -331,7 +318,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t<div class=\"item\">
 \t\t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 198
+        // line 182
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("assets/img/bg4.jpeg"), "html", null, true);
         echo "\" alt=\"Awesome Image\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"carousel-caption\">
@@ -371,7 +358,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 
     public function getDebugInfo()
     {
-        return array (  335 => 198,  326 => 192,  317 => 186,  273 => 146,  268 => 142,  265 => 141,  257 => 237,  251 => 234,  245 => 231,  239 => 228,  235 => 227,  231 => 226,  225 => 222,  223 => 146,  219 => 144,  217 => 141,  195 => 122,  163 => 94,  158 => 92,  154 => 91,  149 => 89,  142 => 85,  134 => 79,  124 => 72,  119 => 70,  113 => 67,  103 => 60,  82 => 42,  60 => 23,  54 => 20,  50 => 19,  44 => 16,  40 => 15,  36 => 14,  21 => 1,);
+        return array (  322 => 182,  313 => 176,  304 => 170,  276 => 146,  271 => 142,  268 => 141,  260 => 221,  254 => 218,  248 => 215,  242 => 212,  238 => 211,  234 => 210,  228 => 206,  226 => 146,  222 => 144,  220 => 141,  198 => 122,  166 => 94,  161 => 92,  157 => 91,  152 => 89,  145 => 85,  137 => 79,  127 => 72,  122 => 70,  116 => 67,  106 => 60,  99 => 56,  82 => 42,  60 => 23,  54 => 20,  50 => 19,  44 => 16,  40 => 15,  36 => 14,  21 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -392,7 +379,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t<link rel=\"icon\" type=\"image/png\" href=\"assets/img/favicon.png\">
 \t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\" />
 
-\t<title>Material Kit by Creative Tim</title>
+\t<title>Tunisie Hologram</title>
 
 \t<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
 
@@ -439,7 +426,7 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t    <div class=\"collapse navbar-collapse\" id=\"navigation-index\">
 \t    \t<ul class=\"nav navbar-nav navbar-right\">
 \t\t\t\t<li>
-\t\t\t\t\t<a href=\"components-documentation.html\" target=\"_blank\">
+\t\t\t\t\t<a href=\"{{ path('hologram_homepage')}}\">
 \t\t\t\t\t\t<i class=\"material-icons\">dashboard</i> Home
 \t\t\t\t\t</a>
 \t\t\t\t</li>
@@ -530,25 +517,9 @@ class __TwigTemplate_9cde67ff23dee20de262298bd99b30119e75406919c8c6733a4b4c5f591
 \t            </div>
                     
 {% block mainContent %}  
-\t\t        <div id=\"buttons\">
-\t\t\t\t\t<div class=\"title\">
-\t\t\t\t\t\t<h3>Buttons <br />
-\t\t\t\t\t\t\t<small>Pick your style</small>
-\t\t\t\t\t\t</h3>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t<div class=\"col-md-8 col-md-offset-2\">
-\t\t\t\t\t\t\t<button class=\"btn btn-primary\">Default</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-round\">Round</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-round\">
-\t\t\t\t\t\t\t\t<i class=\"material-icons\">favorite</i> With Icon
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-fab btn-fab-mini btn-round\">
-\t\t\t\t\t\t\t\t<i class=\"material-icons\">favorite</i>
-\t\t\t\t\t\t\t</button>
-\t\t\t\t\t\t\t<button class=\"btn btn-primary btn-simple\">Simple</button>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
+\t\t      
+\t\t\t\t\t
+\t\t\t\t
                              <div class=\"section\" id=\"carousel\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">

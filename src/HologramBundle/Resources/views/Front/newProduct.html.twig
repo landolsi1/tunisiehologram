@@ -1,6 +1,9 @@
-{% extends is_granted('ROLE_SUPER_ADMIN')
-    ? 'HologramBundle::layout.html.twig'
-    : 'HologramBundle::layouts.html.twig' %}
+{% extends "HologramBundle::layouts.html.twig" %}
+     {% block title %} 
+         <h2> New Product </h2>
+         </br>
+                         {% endblock%}
+    
 {% block mainContent %}          
 <!-- New Product -->
 <div class="container">
@@ -8,9 +11,8 @@
    
       </br>
         
-          </br>
-     </br>
-     <span> <h3 style="padding-left: 200px; color: #73879C;"> New Product </h3> </span>
+      
+    
      </br>
     {{form(f)}}
     

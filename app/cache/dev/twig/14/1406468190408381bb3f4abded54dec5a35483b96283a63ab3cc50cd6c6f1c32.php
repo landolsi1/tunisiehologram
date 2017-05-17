@@ -8,6 +8,7 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
         parent::__construct($env);
 
         $this->blocks = array(
+            'title' => array($this, 'block_title'),
             'mainContent' => array($this, 'block_mainContent'),
         );
     }
@@ -23,7 +24,16 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
         $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 4
+    // line 5
+    public function block_title($context, array $blocks = array())
+    {
+        echo " 
+         <h2> New Product </h2>
+         </br>
+                         ";
+    }
+
+    // line 10
     public function block_mainContent($context, array $blocks = array())
     {
         echo "          
@@ -33,12 +43,11 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
    
       </br>
         
-          </br>
-     </br>
-     <span> <h3 style=\"padding-left: 200px; color: #73879C;\"> New Product </h3> </span>
+      
+    
      </br>
     ";
-        // line 15
+        // line 20
         echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'form');
         echo "
     
@@ -67,7 +76,7 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
 
     public function getDebugInfo()
     {
-        return array (  42 => 15,  27 => 4,  18 => 3,);
+        return array (  51 => 20,  37 => 10,  28 => 5,  19 => 3,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -83,6 +92,12 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
         return new Twig_Source("{% extends is_granted('ROLE_SUPER_ADMIN')
     ? 'HologramBundle::layout.html.twig'
     : 'HologramBundle::layouts.html.twig' %}
+    
+     {% block title %} 
+         <h2> New Product </h2>
+         </br>
+                         {% endblock%}
+    
 {% block mainContent %}          
 <!-- New Product -->
 <div class=\"container\">
@@ -90,9 +105,8 @@ class __TwigTemplate_a4f3db8f2ba0ecd93c9c35397a18a643021f678f7c6c5884d75058a6b75
    
       </br>
         
-          </br>
-     </br>
-     <span> <h3 style=\"padding-left: 200px; color: #73879C;\"> New Product </h3> </span>
+      
+    
      </br>
     {{form(f)}}
     

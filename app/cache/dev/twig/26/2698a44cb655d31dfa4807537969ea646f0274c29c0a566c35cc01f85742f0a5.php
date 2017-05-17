@@ -7,8 +7,6 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
     {
         parent::__construct($env);
 
-        // line 1
-        $this->parent = $this->loadTemplate("HologramBundle::layout.html.twig", "HologramBundle:Back:addFinalVideo.html.twig", 1);
         $this->blocks = array(
             'mainContent' => array($this, 'block_mainContent'),
         );
@@ -16,33 +14,26 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
 
     protected function doGetParent(array $context)
     {
-        return "HologramBundle::layout.html.twig";
+        // line 3
+        return $this->loadTemplate((($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_SUPER_ADMIN")) ? ("HologramBundle::layout.html.twig") : ("HologramBundle::layouts.html.twig")), "HologramBundle:Back:addFinalVideo.html.twig", 3);
     }
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        $this->getParent($context)->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 2
+    // line 4
     public function block_mainContent($context, array $blocks = array())
     {
-        // line 3
+        // line 5
         echo "   
       <link href=\"";
-        // line 4
+        // line 6
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl("Front/css/FileCSS.css"), "html", null, true);
         echo "\" rel=\"stylesheet\" type=\"text/css\" />
      <!-- page content -->
        
-          <div class=\"\">
-            <div class=\"page-title\">
-              <div class=\"title_left\">
-                <h3>Product Validation</h3>
-              </div>
-
-              
-            </div>
             <div class=\"clearfix\"></div>
 
             <div class=\"row\">
@@ -58,22 +49,18 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                   </div>
                   <div class=\"x_content\">
 
-                    <form class=\"form-horizontal form-label-left\" novalidate  method=\"POST\" action=\"\" ";
-        // line 30
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'enctype');
-        echo ">
+                    <form class=\"form-horizontal form-label-left\" novalidate  method=\"POST\" enctype=\"multipart/form-data\"   action=\"";
+        // line 24
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("esprit_hologram_view_validate_product_back", array("id" => (isset($context["id"]) ? $context["id"] : $this->getContext($context, "id")))), "html", null, true);
+        echo "\" >
 
-                   
-                      <span class=\"section\">Product Info</span>
-
-                      
-                     
+               
                       <div class=\"item form-group\">
                         <label class=\"control-label col-md-3 col-sm-3 col-xs-12\" for=\"textarea\">Logo <span class=\"required\">:</span>
                         </label>
                         <div class=\"col-md-6 col-sm-6 col-xs-12\">
                             <img width=\"120\" height=\"120\" src=\"";
-        // line 41
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl((isset($context["img"]) ? $context["img"] : $this->getContext($context, "img"))), "html", null, true);
         echo "\">
                                
@@ -85,7 +72,7 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                      
                     <div  class=\"col-md-6 col-sm-6 col-xs-12\" style=\"width: 510px;\">
                       <input type=\"text\"  id=\"nomp\" name=\"nomp\"   readonly class=\"  form-control  \" value=\"";
-        // line 50
+        // line 40
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["p"]) ? $context["p"] : $this->getContext($context, "p")), "productName", array()), "html", null, true);
         echo "\">
                     </div>    
@@ -95,7 +82,7 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                         </label>
                         <div class=\"col-md-6 col-sm-6 col-xs-12\">
                              <input id=\"name\" class=\"form-control col-md-7 col-xs-12\" data-validate-length-range=\"6\" data-validate-words=\"2\" name=\"name\"  readonly type=\"text\" value=";
-        // line 57
+        // line 47
         echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["d"]) ? $context["d"] : $this->getContext($context, "d")), "d/m/Y"), "html", null, true);
         echo ">
                         </div>
@@ -106,7 +93,7 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                         </label>
                         <div class=\"col-md-6 col-sm-6 col-xs-12\" style=\"width: 510px;\">
                           <textarea  id=\"contenup\" name=\"contenup\"  required=\"required\" readonly class=\"form-control col-md-7 col-xs-12\"> ";
-        // line 65
+        // line 55
         echo twig_escape_filter($this->env, $this->getAttribute((isset($context["p"]) ? $context["p"] : $this->getContext($context, "p")), "productContent", array()), "html", null, true);
         echo "</textarea>
                         </div>
@@ -118,36 +105,26 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                         <div class=\"col-md-6 col-sm-6 col-xs-12\">
                            <video width=\"500\" height=\"300\" controls>
                                  <source src=\"";
-        // line 74
+        // line 64
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bundle\TwigBundle\Extension\AssetsExtension')->getAssetUrl((isset($context["video"]) ? $context["video"] : $this->getContext($context, "video"))), "html", null, true);
         echo "\" type=\"video/mp4\">
                            </video>
                                
                         </div>
                       </div>
-                             <div class=\"item form-group\">
+                   <div class=\"item form-group\">
                         <label class=\"control-label col-md-3 col-sm-3 col-xs-12\" for=\"textarea\">Final Product <span class=\"required\">:</span>
                         </label>
-                       <div class=\"col-md-6 col-sm-6 col-xs-12\" >
-                                     ";
-        // line 83
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'widget');
-        echo "                         
-                            </div>   
-                      </div>
-                           
-                    
                       
-              
-
+                        
+                      </div>
+                           <div style=\"padding-left: 25%;\">
+                             <input type=\"file\" name=\"file\" id=\"file\"   />
+                           </div>
                       <div class=\"ln_solid\"></div>
                     <div class=\"form-group\">
                         <div class=\"col-md-6 col-md-offset-3\">
-                       
-                        
-                    
                            <button  type=\"submit\" class=\"btn btn-success\" >Validate</button>
-                      
                         
                         </div>
                       </div>
@@ -171,7 +148,7 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
 
     public function getDebugInfo()
     {
-        return array (  134 => 83,  122 => 74,  110 => 65,  99 => 57,  89 => 50,  77 => 41,  63 => 30,  34 => 4,  31 => 3,  28 => 2,  11 => 1,);
+        return array (  109 => 64,  97 => 55,  86 => 47,  76 => 40,  64 => 31,  54 => 24,  33 => 6,  30 => 5,  27 => 4,  18 => 3,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -184,20 +161,14 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends \"HologramBundle::layout.html.twig\" %}
+        return new Twig_Source("{% extends is_granted('ROLE_SUPER_ADMIN')
+    ? 'HologramBundle::layout.html.twig'
+    : 'HologramBundle::layouts.html.twig' %}
 {% block mainContent %}
    
       <link href=\"{{asset('Front/css/FileCSS.css')}}\" rel=\"stylesheet\" type=\"text/css\" />
      <!-- page content -->
        
-          <div class=\"\">
-            <div class=\"page-title\">
-              <div class=\"title_left\">
-                <h3>Product Validation</h3>
-              </div>
-
-              
-            </div>
             <div class=\"clearfix\"></div>
 
             <div class=\"row\">
@@ -213,13 +184,9 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                   </div>
                   <div class=\"x_content\">
 
-                    <form class=\"form-horizontal form-label-left\" novalidate  method=\"POST\" action=\"\" {{ form_enctype(f) }}>
+                    <form class=\"form-horizontal form-label-left\" novalidate  method=\"POST\" enctype=\"multipart/form-data\"   action=\"{{ path('esprit_hologram_view_validate_product_back', {id: id }) }}\" >
 
-                   
-                      <span class=\"section\">Product Info</span>
-
-                      
-                     
+               
                       <div class=\"item form-group\">
                         <label class=\"control-label col-md-3 col-sm-3 col-xs-12\" for=\"textarea\">Logo <span class=\"required\">:</span>
                         </label>
@@ -262,26 +229,19 @@ class __TwigTemplate_a6894d94bd19e1e201de2571cf4ac1a5db3909e2d5abed3fe208b956e49
                                
                         </div>
                       </div>
-                             <div class=\"item form-group\">
+                   <div class=\"item form-group\">
                         <label class=\"control-label col-md-3 col-sm-3 col-xs-12\" for=\"textarea\">Final Product <span class=\"required\">:</span>
                         </label>
-                       <div class=\"col-md-6 col-sm-6 col-xs-12\" >
-                                     {{ form_widget(f) }}                         
-                            </div>   
-                      </div>
-                           
-                    
                       
-              
-
+                        
+                      </div>
+                           <div style=\"padding-left: 25%;\">
+                             <input type=\"file\" name=\"file\" id=\"file\"   />
+                           </div>
                       <div class=\"ln_solid\"></div>
                     <div class=\"form-group\">
                         <div class=\"col-md-6 col-md-offset-3\">
-                       
-                        
-                    
                            <button  type=\"submit\" class=\"btn btn-success\" >Validate</button>
-                      
                         
                         </div>
                       </div>
