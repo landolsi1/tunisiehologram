@@ -26,6 +26,7 @@ class ProductForm  extends AbstractType{
        $builder
        ->add('productName','text',array('attr' =>array('class'=>'form-control col-md-7 col-xs-12','required'=>TRUE)) )
        ->add('productContent','textarea',array('attr' =>array('class'=>'item form-group form-control')))
+       ->add('company','text',array('attr' =>array('class'=>'item form-group form-control')))
        ->add('video','file',array('attr' =>array('class'=>'item form-group form-control','required'=>TRUE)))
        ->add('productPhoto','file',array('attr' =>array('class'=>'item form-group form-control','required'=>TRUE)))
   /*  ->add('classeProduct', 'choice', array(

@@ -231,7 +231,7 @@ class ProductController extends Controller{
                 "type" => $file1->getMimeType()
             );
             
-            $upload1 = new Upload("", "C:\\wamp\\www\\hologamme\\uploads\\", 0, 0);
+            $upload1 = new Upload("", "C:\\wamp\\www\\userAuth\\uploads\\", 0, 0);
             $product->setFinalVid($upload1->uploadFile($file));
             $product->setFinalVideo($upload->uploadFile($file));
             $em->persist($product);

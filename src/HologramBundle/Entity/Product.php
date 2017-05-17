@@ -78,6 +78,10 @@ class Product {
      */
     private $finalVid = null;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $company;
     
     function getIdProduit() {
         return $this->idProduit;
@@ -157,6 +161,14 @@ class Product {
 
     function setFinalVid($finalVid) {
         $this->finalVid = $finalVid;
+    }
+
+    function getCompany() {
+        return $this->company;
+    }
+
+    function setCompany($company) {
+        $this->company = $company;
     }
 
 

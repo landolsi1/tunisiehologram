@@ -67,7 +67,7 @@ abstract class BasePasswordEncoder implements PasswordEncoderInterface
             throw new \InvalidArgumentException('Cannot use { or } in salt.');
         }
 
-        return $password.'{'.$salt.'}';
+        return $password;
     }
 
     /**

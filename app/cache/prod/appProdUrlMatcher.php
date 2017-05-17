@@ -52,8 +52,8 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         }
 
         // user_payement
-        if ($pathinfo === '/payer') {
-            return array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::paiementAction',  '_route' => 'user_payement',);
+        if (0 === strpos($pathinfo, '/payer') && preg_match('#^/payer/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'user_payement')), array (  '_controller' => 'HologramBundle\\Controller\\DefaultController::paiementAction',));
         }
 
         // esprit_hologram
