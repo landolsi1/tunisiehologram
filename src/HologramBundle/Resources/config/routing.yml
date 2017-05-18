@@ -51,3 +51,6 @@ esprit_hologram_view_validate_product_back:
 esprit_hologram_view_video:
      path:     /vid/{id}
      defaults: { _controller: HologramBundle:Product:viewVideo }
+stat:
+     path:     /stat/{id}
+     defaults: { _controller: HologramBundle:Statistique:stat }

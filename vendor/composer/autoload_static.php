@@ -9,11 +9,15 @@ class ComposerStaticInit11ec8737d802fa7d48e506d9ede21a56
     public static $files = array (
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
-        'ce89ac35a6c330c55f4710717db9ff78' => __DIR__ . '/..' . '/kriswallsmith/assetic/src/functions.php',
         '3fad0ebbff9928a94a9d8941fb314bd8' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/Intl/Resources/stubs/functions.php',
+        'ce89ac35a6c330c55f4710717db9ff78' => __DIR__ . '/..' . '/kriswallsmith/assetic/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Z' => 
+        array (
+            'Zend\\Json\\' => 10,
+        ),
         'S' => 
         array (
             'Symfony\\Bundle\\SwiftmailerBundle\\' => 33,
@@ -24,6 +28,10 @@ class ComposerStaticInit11ec8737d802fa7d48e506d9ede21a56
         'P' => 
         array (
             'Psr\\Log\\' => 8,
+        ),
+        'O' => 
+        array (
+            'Ob\\HighchartsBundle\\' => 20,
         ),
         'M' => 
         array (
@@ -48,6 +56,10 @@ class ComposerStaticInit11ec8737d802fa7d48e506d9ede21a56
     );
 
     public static $prefixDirsPsr4 = array (
+        'Zend\\Json\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/zendframework/zend-json/src',
+        ),
         'Symfony\\Bundle\\SwiftmailerBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/swiftmailer-bundle',
@@ -67,6 +79,10 @@ class ComposerStaticInit11ec8737d802fa7d48e506d9ede21a56
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
+        'Ob\\HighchartsBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ob/highcharts-bundle',
         ),
         'Monolog\\' => 
         array (

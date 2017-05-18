@@ -49,7 +49,7 @@ class Payment
     /**
      * @var string
      *
-     * @ORM\Column(name="verification", type="string", length=65535, nullable=false)
+     * @ORM\Column(name="verification", type="string", length=655, nullable=false)
      */
     private $verification;
 

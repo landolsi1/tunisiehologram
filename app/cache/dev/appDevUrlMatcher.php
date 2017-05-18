@@ -216,6 +216,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'esprit_hologram_view_video')), array (  '_controller' => 'HologramBundle\\Controller\\ProductController::viewVideoAction',));
         }
 
+        // stat
+        if (0 === strpos($pathinfo, '/stat') && preg_match('#^/stat/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'stat')), array (  '_controller' => 'HologramBundle\\Controller\\StatistiqueController::statAction',));
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
