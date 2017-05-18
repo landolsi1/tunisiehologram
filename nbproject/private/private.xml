@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Entity/Upload.php</file>
-            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Controller/ProductController.php</file>
-            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Resources/views/Back/ViewValidateProd.html.twig</file>
-            <file>file:/C:/wamp/www/tunisiehologram/app/config/parameters.yml</file>
-            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Form/AddFinalVideoForm.php</file>
-            <file>file:/C:/wamp/www/tunisiehologram/src/HologramBundle/Entity/Product.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/src/HologramBundle/Entity/Payment.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/src/HologramBundle/Controller/StatistiqueController.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/src/HologramBundle/Entity/Product.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/app/AppKernel.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/src/HologramBundle/Entity/Spectators.php</file>
+            <file>file:/C:/wamp64/www/tunisiehologram/src/HologramBundle/Resources/config/routing.yml</file>
         </group>
     </open-files>
 </project-private>
